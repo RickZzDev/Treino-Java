@@ -1,0 +1,28 @@
+package Projeto;
+
+public class BancoMain {
+	public static void main(String[] args) {
+		Banco objeto= new Banco();
+		objeto.setDia(10);
+		objeto.setAno(2019);
+		objeto.setMes(7);
+		objeto.setCodigo("237");
+		objeto.setBarras("34190.49546 15245.132654 65231.232514 8 00350000001055");
+	
+		System.out.println("faltam: " + objeto.DiasInt()  + " dias para o vencimento do boleto");
+		System.out.println("Seu boleto vence no dia:" +objeto.Calcula() + "/" + objeto.getMes() + "/" + objeto.getAno());
+		 System.out.println(objeto.MostraBanco());
+		 System.out.println("Total a pagar: " + objeto.MostraValor());
+		
+		  
+		  
+		  
+  
+		
+	
+		
+	}
+
+
+	
+}

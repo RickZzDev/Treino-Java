@@ -1,0 +1,166 @@
+package Projeto;
+
+public class Banco {
+	public String Codigo;
+	private int dia;
+	private int mes;
+	private int ano;
+		int st3;
+	private String barras;
+	int numeroConvertido2;
+	
+	public float DiasInt() {
+		String[] array = new String[3];
+		array = barras.split(" ");
+//		System.out.println(array[1]);
+		String st2 = array[4].substring(9, 14);
+		float numeroConvertido2 = Float.parseFloat(array[4].substring(0,4));
+		
+//		System.out.println(st2);
+		String st3 = array[4].substring(0, 4);
+		float numeroConvertido = Float.parseFloat(array[0]);
+		
+		return numeroConvertido2;
+	}
+	
+	public double MostraValor() {
+		String[] array = new String[3];
+		array = barras.split(" ");
+//		System.out.println(array[1]);
+		String st2 = array[4].substring(9, 14);
+//		Integer numeroConvertido2 = Integer.parseInt(array[4]);
+		
+//		System.out.println(st2);
+		String st3 = array[0].substring(0, 4);
+		
+		
+		double numeroConvertido = Double.parseDouble(array[4].substring(9,14));
+		return numeroConvertido;
+	}
+
+	public String MostraBanco() {
+		
+		String[] array = new String[3];
+		array = barras.split(" ");
+//		System.out.println(array[1]);
+		String st2 = array[4].substring(9, 14);
+//		Integer numeroConvertido2 = Integer.parseInt(array[4]);
+		
+//		System.out.println(st2);
+		String st3 = array[0].substring(0, 4);
+		
+		
+		float numeroConvertido = Float.parseFloat(array[0]);
+		
+		  if(numeroConvertido>= 24190 && numeroConvertido < 24199) {
+			  String banco=("Banco: Bradesco");
+			  
+		  }
+		  if(numeroConvertido>= 34190 && numeroConvertido < 34199) {
+			 banco = ("Banco: Itaú");
+		  }
+		  if(numeroConvertido>= 190 && numeroConvertido < 199) {
+			  banco = ("Banco: Banco do Brasil");
+			
+		  }
+		return  banco;
+		  
+	
+		
+	}
+	
+	
+
+
+	public int Calcula() {
+		
+		if(mes%2==0 && mes<=7) {
+			if(dia+DiasInt()>30) {
+				int auxiliar = 30 -dia;
+				data = DiasInt()- auxiliar;
+				mes++;
+				
+			}
+			
+		}else if(mes%2 > 0 && mes <=7 ) {
+			int auxiliar = 31 -dia;
+			data = DiasInt()- auxiliar;
+			mes++;
+		}else if(mes%2 ==0 && mes > 7) {
+			int auxiliar = 31 -dia;
+			data = DiasInt()- auxiliar;
+			mes++;
+		}else if(mes%2 > 0 && mes > 7 ) {
+			int auxiliar = 30 -dia;
+			data = DiasInt()- auxiliar;
+			mes++;
+		}
+		return (int) data;
+	}
+	
+	public int getNumeroConvertido2() {
+		return numeroConvertido2;
+	}
+
+	public void setNumeroConvertido2(int numeroConvertido2) {
+		this.numeroConvertido2 = numeroConvertido2;
+	}
+	
+	
+	
+	public String getBarras() {
+		return barras;
+	}
+
+	public void setBarras(String barras) {
+		this.barras = barras;
+	}
+	public int getDia() {
+		return dia;
+	}
+	public void setDia(int dia) {
+		this.dia = dia;
+	}
+	public int getMes() {
+		return mes;
+	}
+	public void setMes(int mes) {
+		this.mes = mes;
+	}
+	public int getAno() {
+		return ano;
+	}
+	public void setAno(int ano) {
+		this.ano = ano;
+	}
+	public String getCodigo() {
+		return Codigo;
+	}
+	public void setCodigo(String codigo) {
+		Codigo = codigo;
+	}
+	private float data;
+	private double valor;
+	private String banco;
+
+	public double getValor() {
+		return valor;
+	}
+	public void setValor(double valor) {
+		this.valor = valor;
+	}
+	public String getBanco() {
+		return banco;
+	}
+	public void setBanco(String banco) {
+		this.banco = banco;
+	}
+	public int getSt3() {
+		return st3;
+	}
+
+	public void setSt3(int st3) {
+		this.st3 = st3;
+	}
+	
+}
