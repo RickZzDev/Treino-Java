@@ -1,0 +1,32 @@
+package org.com.fpoo.principal;
+
+
+public class ImcClienteMain {
+	public static void main(String[] args) {
+		//Objeto1
+		ImcCliente objeto= new ImcCliente("Thor Gordola");
+		 objeto.setDataNasc("54/54/5454");
+		objeto.setPeso(85);
+		objeto.setAltura(1.95);
+		objeto.exibir();
+		System.out.println(" ");
+		//Objeto2
+		ImcCliente objeto2 = new ImcCliente("julinho" , "25/01/1932" , 20 , 1.50, "Masculino");
+		objeto2.exibir();
+		System.out.println(" ");
+		//Objeto3
+		ImcCliente objeto3 = new ImcCliente ("Alfred" , "25/07/2015" , 180 , 1.85, "Feminino");
+		objeto3.exibir();
+		System.out.println(" ");
+		
+		
+
+
+		
+
+		
+
+		
+		
+	}
+}
